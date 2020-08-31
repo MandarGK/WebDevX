@@ -1,0 +1,362 @@
+body{
+	font-family: Arial, 'Segoe UI', sans-serif ;
+	margin: 0;
+	padding:0;
+    line-height: 1.7em;
+ box-sizing: border-box;
+   background-color: #333;
+
+}
+/*Main Styling */
+
+.container{
+	margin:auto;
+	overflow: auto;
+	 max-width: 1100px;
+	  padding: 0 20px;
+
+}
+
+.container1{
+	margin:auto;
+	overflow: auto;
+	 max-width: 1300px;
+	  padding: 0 20px;
+}
+/*Nav Styling*/
+header{
+	background-color: #333;
+	color: #F7DBA7;
+}
+
+a{
+    color: #F7DBA7;
+	text-decoration: none;
+    text-transform: uppercase;
+    font-size:15px;
+}
+
+li{
+	list-style: none;
+	display: inline;
+	padding-right:20px;
+	padding-left:20px;
+}
+
+#brand{
+	float: left;
+}
+
+nav{ 
+	margin-top:5px;
+	float:right;
+}
+
+.highlight{
+	color:#C57B57;
+    
+}
+
+#navbar .current, a:hover {
+	color:#C57B57;
+	 font-weight:bolder;
+	 
+
+}
+
+/*Showcase Styling*/
+#main {
+  background: url(../images/main.jpg) no-repeat center center/cover;
+  height: 680px;
+}
+
+#main .container{
+	text-align: center;
+	color: #FFF;
+	padding-top: 150px;
+}
+
+#main h1{
+	font-size: 3.5em;
+  padding-bottom: 10px;
+  line-height: 1.5em;
+	
+
+}
+
+.btn{
+  display: inline-block;
+  font-size: 18px;
+  background-color: #333;
+  color:#F7DBA7 ;
+  padding: 13px 20px;
+}
+
+
+.btn-effect{
+	border:solid;
+	background-color: #333;
+	font-size: 20px ;
+
+}
+
+#content{
+	
+	background-color: #444;
+	text-align: center;
+	color:#FFF;
+	padding: 40px 0 40px 0;
+	border-bottom: solid 5px #F7DBA7 ;
+}
+
+/*Section Styling*/
+
+#tabs{
+	margin-top: 20px;
+	
+}
+
+.tab{
+  float:left;
+  text-align: center;
+  width: 30%;
+  padding:10px 0 0 30px;
+  color: #fff;
+}
+
+
+
+
+
+#main-footer{
+
+  text-align: center;
+  background: #444;
+  color: #FFF;
+  padding: 20px;
+}
+
+.clr{
+  clear: both;
+}
+
+/* About page styling */
+
+#showcase{
+ background: url(../images/showcase.jpg) no-repeat center center/cover;
+  height: 300px;
+}
+
+#showcase .container{
+	color: #000;
+  text-align: center;
+  font-size: 20px;
+  padding-top: 40px;
+  font-weight: bold;
+}
+
+#client{
+	background: #444;
+	color: #fff;
+	text-align: center;
+	padding:20px;
+	font-size: 20px;
+
+}
+
+#boxes{
+	
+	color: #fff;
+	background-color:#444;
+
+}
+
+#boxes .box{
+	
+	text-align: center;
+	float:left; 
+	width:15%;
+	padding:50px;
+	
+}
+
+
+#boxes .box img{
+	width: 150px;
+	border-radius: 15px;
+}
+
+
+.contact{
+  float:left;
+  max-width: 50%;
+ padding-right: 320px;
+color: #fff;
+
+}
+
+
+
+.quote input, .quote textarea{
+  width:190%;
+  padding:10px;
+}
+
+.about{
+  float:right;
+  width: 40%;
+  color: #fff;
+  text-align: center;
+  line-height: 1.5em;
+
+}
+
+#social{
+  padding-bottom: 15px;
+}
+
+/* Course page styling*/
+
+#cards{
+	background-color: #39393A;
+	border-top: solid 5px #F7DBA7 ;
+}
+
+#FE{
+	color: #fff;
+	padding-left: 40px;
+
+}
+
+#BE{
+	color: #fff;
+	padding-left: 40px;
+}
+
+.card {
+  background-color: #fff;
+  max-width: 250px;
+  margin: 40px;
+  text-align: center;
+  font-family: arial;
+  float: left;
+  padding: 15px;
+  color: #000;
+  border-radius: 5px;
+
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+#FE #BE{
+	color: #fff;
+}
+
+@media(max-width: 768px){
+   header #brand,
+   header nav#navbar
+   {
+   	float: none;
+   	text-align: center;
+   	width: 100%;
+    margin: 0;
+    
+   }
+
+    header li{
+   margin-right: 10%;
+    display:block;
+
+
+    }
+   
+   #main h1 {
+   	line-height:4.0rem;
+      font-size:2.5em;
+   }
+
+   #content h1{
+   	line-height:2.5rem;
+    font-size: 25px;
+   }
+   
+  #tabs .tab{
+    float:none;
+     width:90%;
+    
+     padding-left: 0;
+     margin: 0 5% 0 5%;
+
+   }
+   
+   
+  section#cards {
+   padding-left:5%;
+    padding-right:5%;
+    padding-bottom: 2%;
+   
+   	}
+
+   .card{
+    margin :2% 0 2% 0;
+    padding-left:15%;
+    padding-right:15%;
+    max-width: 100%;
+    
+   }
+    section#showcase p{
+      font-size: 1.1rem
+
+
+    }
+
+    #boxes .box{
+     width: 80%;
+     padding-left: 10%;
+      
+     }
+
+    .contact{
+      max-width: 100%;
+      float: none;
+      padding:0;
+    }
+    
+     .quote input, .quote textarea{
+      width: 90%;
+     }
+
+     #btn{
+      width: 100%;
+      margin:5px 0 5px 0;
+     }
+
+    .about{
+      width:85%;
+     float: none;
+     padding-left: 30px;
+    }
+
+
+   }
+
+  
