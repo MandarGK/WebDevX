@@ -176,21 +176,21 @@ nav{
 	text-align: center;
 	float:left; 
 	width:15%;
-	padding:50px;
+	padding:5%;
 	
 }
 
 
 #boxes .box img{
-	width: 150px;
+	width: 120px;
 	border-radius: 15px;
 }
 
 
 .contact{
   float:left;
-  max-width: 50%;
- padding-right: 320px;
+  
+ 
 color: #fff;
 
 }
@@ -198,13 +198,14 @@ color: #fff;
 
 
 .quote input, .quote textarea{
-  width:190%;
-  padding:10px;
+  width:95%;
+  padding:15px;
 }
 
 .about{
-  float:right;
-  width: 40%;
+  
+  
+  width: 95%;
   color: #fff;
   text-align: center;
   line-height: 1.5em;
@@ -212,6 +213,7 @@ color: #fff;
 }
 
 #social{
+
   padding-bottom: 15px;
 }
 
@@ -345,7 +347,7 @@ color: #fff;
     }
     
      .quote input, .quote textarea{
-      width: 90%;
+      width: 95%;
      }
 
      #btn{
