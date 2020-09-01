@@ -48,7 +48,7 @@ li{
 }
 
 nav{ 
-	margin-top:2px;
+	margin-top:4px;
 	float:right;
 }
 
@@ -189,9 +189,7 @@ nav{
 
 .contact{
   float:left;
-  
- 
-color: #fff;
+   color: #fff;
 
 }
 
@@ -203,13 +201,17 @@ color: #fff;
 }
 
 .about{
-  
-  
   width: 95%;
   color: #fff;
   text-align: center;
   line-height: 1.5em;
+  font-size: 1em;
+  margin-left:12px;
 
+}
+
+.secondary{
+  color:#fff;
 }
 
 #social{
