@@ -2,9 +2,9 @@ body{
 	font-family: Arial, 'Segoe UI', sans-serif ;
 	margin: 0;
 	padding:0;
-    line-height: 1.7em;
+ line-height: 1.5em;
  box-sizing: border-box;
-   background-color: #333;
+ background-color: #333;
 
 }
 /*Main Styling */
@@ -39,8 +39,8 @@ a{
 li{
 	list-style: none;
 	display: inline;
-	padding-right:20px;
-	padding-left:20px;
+	padding-right:15px;
+	padding-left:15px;
 }
 
 #brand{
@@ -48,7 +48,7 @@ li{
 }
 
 nav{ 
-	margin-top:5px;
+	margin-top:2px;
 	float:right;
 }
 
@@ -329,7 +329,7 @@ color: #fff;
     
    }
     section#showcase p{
-      font-size: 1.1rem
+      font-size: 15px;
 
 
     }
@@ -347,7 +347,7 @@ color: #fff;
     }
     
      .quote input, .quote textarea{
-      width: 95%;
+      width: 90%;
      }
 
      #btn{
