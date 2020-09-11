@@ -278,6 +278,25 @@ nav{
 	color: #fff;
 }
 
+
+
+#jumbotron{
+  background-color: #466060;
+  color: #FFF;
+   border: solid #fff;
+  
+}
+
+#jumbotron h1{
+  font-size: 40px;
+  font-family: Arial;
+}
+
+.enroll{
+  background-color: #000;
+  padding:5px;
+
+}
 @media(max-width: 768px){
    header #brand,
    header nav#navbar
@@ -363,7 +382,10 @@ nav{
      padding-left: 30px;
     }
 
-
+     #jumbotron{
+      border: solid #fff; 
+      margin-left: 5%;
+     }
    }
 
   

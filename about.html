@@ -6,6 +6,103 @@
 	<title>Web DevX | About</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		$(function() {
+
+         $("#fname_error_message").hide();
+         $("#email_error_message").hide();
+          $("#description_error_message").hide();
+         
+         var error_fname = false;
+         var error_email = false;
+          var error_description = false;
+         
+
+         $("#form_fname").focusout(function(){
+            check_fname();
+         });
+         
+         $("#form_email").focusout(function() {
+            check_email();
+         });
+         $("#form_description").focusout(function() {
+            check_sname();
+         });
+         
+
+         function check_fname() {
+            var pattern = /^[a-zA-Z]*$/;
+            var fname = $("#form_fname").val();
+            if (pattern.test(fname) && fname !== '' && fname.length>3) {
+               $("#fname_error_message").hide();
+               $("#form_fname").css("border-bottom","5px solid #34F458");
+            } else {
+               $("#fname_error_message").html("Should contain atleast 3 Characters");
+               $("#fname_error_message").show();
+               $("#form_fname").css("border-bottom","5px solid #F90A0A");
+               error_fname = true;
+            }
+         }
+
+         
+
+         function check_email() {
+            var pattern = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+            var email = $("#form_email").val();
+            if (pattern.test(email) && email !== '') {
+               $("#email_error_message").hide();
+               $("#form_email").css("border-bottom","5px solid #34F458");
+            } else {
+               $("#email_error_message").html("Invalid Email");
+               $("#email_error_message").show();
+               $("#form_email").css("border-bottom","5px solid #F90A0A");
+               error_email = true;
+            }
+         }
+
+          function check_description() {
+            var pattern = /^[a-zA-Z]*$/;
+            var description = $("#form_description").val()
+            if (pattern.test(description) && description !== ''  && description.length>2) {
+               $("#description_error_message").hide();
+               $("#form_description").css("border-bottom","2px solid #34F458");
+            } else {
+               $("#description_error_message").html("Should contain atleast 3 Characters");
+               $("#description_error_message").show();
+               $("#form_description").css("border-bottom","2px solid #F90A0A");
+               error_description = true;
+            }
+         }
+
+
+
+         $("#registration_form").submit(function() {
+            error_fname = false;
+            error_email = false;
+            error_description = false;
+            
+            check_fname();
+           	check_email();
+           	check_description();
+            
+
+            if (error_fname === false  && error_email === false && error_description === false) {
+               alert("Registration Successfull");
+               return true;
+            } else {
+               alert("Please Fill the form Correctly");
+               return false;
+            }
+
+            
+            
+         });
+
+      });
+
+
+	</script>
 </head>
 <body>
 	<header >
@@ -42,25 +139,29 @@
 <section id="boxes">
 	<div class="container">
 		<div class="box">
-		      <img src="./images/facebook.png">
+			 <a href="https://www.facebook.com" target="_blank">
+		      <img src="./images/facebook.png"></a>
 		      <h1>Facebook</h1>
 		      
 	    </div>
 
        	<div class="box">
-		      <img src="./images/amazon.png">
+       		<a href="https://www.amazon.com" target="_blank">
+		      <img src="./images/amazon.png"></a>
 		      <h1>Amazon</h1>
 		    
 	    </div>
 
 	    <div class="box">
-		      <img src="./images/microsoft.png">
+	    	<a href="https://www.microsoft.com" target="_blank">
+		      <img src="./images/microsoft.png"></a>
 		      <h1>Microsoft</h1>
 		      
 	    </div>
 
 	    <div class="box">
-		      <img src="./images/google.png">
+	    	<a href="https://www.google.com" target="_blank">
+		      <img src="./images/google.png"></a>
 		      <h1>Google</h1>
 		      
 	    </div>
@@ -73,24 +174,27 @@
  	 
           <div class="contact">
             <h2>To Get Enroll | Contact us</h2>
-            <form class="quote">
+            <form   id="registration_form" class="quote"  >
   						<div>
   							<label>Name</label><br>
-  							<input type="text" placeholder="Name">
+  							<input id="form_fname" name="" required="" class="username" type="text" placeholder="Name">
+  							<label  class="error_form" id="fname_error_message"></label>
   						</div>
   					
   						<div>
   							<label>Email</label><br>
-  							<input type="email" placeholder="Email Address">
+  							<input id="form_email" name="" required="" class="email" type="text" placeholder="Email Address : example@gmail.com">
+  							<label class="error_form" id="email_error_message"></label>
   						</div>
   						
   						<div>
   							<label>Description</label><br>
-  							<textarea placeholder="Add a Short Description.."></textarea>
+  							<textarea type="text" id="form_description" class="description" name="" required=""placeholder="Add a Short Description.." ></textarea>
   						</div>
-  						
-  						<button  id="btn"
-  						class="btn btn-effect" type="submit">Send</button>
+  						<label  class="error_form" id="description_error_message"></label>
+  						<Br>
+  						<button  id="btn" 
+  						class="btn btn-effect" type="submit" value="Register" name="" >Send</button>
 					</form>
          
         
@@ -125,10 +229,7 @@
 <footer id="main-footer">
 	<h3>MANDAR KALE</h3>
 	<i class="fa fa-envelope-o" style="font-size:20px"> mandarkale5@gmail.com </i>
-
-	
-	 
-	 <p>Web DevX &copy; 2020 Copyright</p>
+     <p>Web DevX &copy; 2020 Copyright</p>
 </footer>
 
 </body>
